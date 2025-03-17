@@ -32,6 +32,11 @@
 				color: #bbb;
 				font-weight: normal;
 			}
+
+			&:hover {
+				color: #1700c5;
+				transition: 0.3s;
+			}
 		}
 
 		.bottom {
@@ -49,4 +54,9 @@
 			}
 		}
 	}
+}
+
+a {
+	text-decoration: none;
+	color: #000;
 }

@@ -22,10 +22,10 @@ export const ProductsListing = ({ items, status }: IProductsListingProps) => {
 				<Modal>Are you sure you want to delete the product?</Modal>
 			)}
 			<div className={styles.header}>
+				<Selector />
 				<button style={{ background: 'rgb(255, 157, 0)' }}>
 					Add new product
 				</button>
-				<Selector />
 			</div>
 			{status === 'loading' && <div>Loading...</div>}
 			{status === 'error' && <div>Failed to fetch items</div>}

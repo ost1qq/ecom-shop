@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { IItem, setCurrentProductId } from '../../../store/slices/itemsSlice';
 import { setModalStatus } from '../../../store/slices/modalSlice';
 import styles from './Card.module.scss';
@@ -19,9 +20,11 @@ export const Card = ({ item }: ICardProps) => {
 					width={item.size.width}
 					height={item.size.width}
 				/>
-				<h3>
-					{item.name} <span>{item.weight}</span>
-				</h3>
+				<NavLink to={`/products/${item.id}`}>
+					<h3>
+						{item.name} <span>{item.weight}</span>
+					</h3>
+				</NavLink>
 				<div className={styles.bottom}>
 					<p>Count: {item.count}</p>
 					<button
