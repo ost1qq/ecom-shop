@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import itemsSlice from './slices/itemsSlice';
+import modalSlice from './slices/modalSlice';
 
 export const store = configureStore({
 	reducer: {
 		items: itemsSlice,
+		modal: modalSlice,
 	},
 });
 

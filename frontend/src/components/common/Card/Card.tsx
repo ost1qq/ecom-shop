@@ -1,4 +1,6 @@
-import { IItem } from '../../../store/slices/itemsSlice';
+import { useDispatch } from 'react-redux';
+import { IItem, setCurrentProductId } from '../../../store/slices/itemsSlice';
+import { setModalStatus } from '../../../store/slices/modalSlice';
 import styles from './Card.module.scss';
 
 interface ICardProps {
@@ -6,6 +8,8 @@ interface ICardProps {
 }
 
 export const Card = ({ item }: ICardProps) => {
+	const dispatch = useDispatch();
+
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.card}>
@@ -20,7 +24,15 @@ export const Card = ({ item }: ICardProps) => {
 				</h3>
 				<div className={styles.bottom}>
 					<p>Count: {item.count}</p>
-					<button style={{ background: 'red' }}>Delete</button>
+					<button
+						style={{ background: 'red' }}
+						onClick={() => {
+							dispatch(setCurrentProductId(item.id));
+							dispatch(setModalStatus(1));
+						}}
+					>
+						Delete
+					</button>
 				</div>
 			</div>
 		</div>
