@@ -1,0 +1,54 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"imageUrl": "https://www.designindaba.com/sites/default/files/node/news/23566/sonic-burger.jpg",
+			"name": "Burger",
+			"count": 4,
+			"size": {
+				"width": 200,
+				"height": 200
+			},
+			"weight": "200g",
+			"comments": [1, 2]
+		},
+		{
+			"id": 2,
+			"imageUrl": "https://img.freepik.com/premium-photo/ai-generative-high-quality-3d-hotdog-design-white-background_786887-991.jpg?w=2000",
+			"name": "Hotdog",
+			"count": 4,
+			"size": {
+				"width": 200,
+				"height": 200
+			},
+			"weight": "250g",
+			"comments": [1, 2]
+		},
+		{
+			"id": 3,
+			"imageUrl": "https://img.freepik.com/premium-photo/french-fries-isolated-white-transparent-background_771335-63663.jpg",
+			"name": "French fries",
+			"count": 2,
+			"size": {
+				"width": 200,
+				"height": 200
+			},
+			"weight": "50g",
+			"comments": [1, 2]
+		}
+	],
+	"comments": [
+		{
+			"id": 1,
+			"productId": 1,
+			"description": "some text here",
+			"date": "14:00 22.08.2021"
+		},
+		{
+			"id": 2,
+			"productId": 1,
+			"description": "another comment",
+			"date": "15:30 22.08.2021"
+		}
+	]
+}
